@@ -11,7 +11,7 @@ namespace DAL
         {
             try
             {
-                using(IDBHelper dBHelper = DBTypeSelector.GetDBInstant("GetAllJobs"))
+                using(IDBHelper dBHelper = DBTypeSelector.GetDBInstant("dbo.GetAllJobs"))
                 {
                     dBHelper.AddParameter("@Name", name);
                     return dBHelper.FillDataTable();
